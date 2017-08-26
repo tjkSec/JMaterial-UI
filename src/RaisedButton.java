@@ -117,6 +117,20 @@ public class RaisedButton extends JButton{
         this.setForeground(Color.decode("#B2A4A4"));
     }
 
+    private String toolTipTheme = "dark";
+    public void setToolTipTheme(String newTheme) {
+        this.toolTipTheme = newTheme;
+        if(!(newTheme.toLowerCase().equals("dark") || newTheme.toLowerCase().equals("light"))) {
+            // default theme
+            this.toolTipTheme = "dark";
+        }
+    }
+
+    @Override
+    public JToolTip createToolTip() {
+        return (new Tooltip(this, this.toolTipTheme));
+    }
+
     private void __init__() {
         switch(this.type.toLowerCase()) {
             case "default":

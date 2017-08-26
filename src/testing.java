@@ -18,7 +18,7 @@ public class testing extends JFrame {
 
 
         /* FlatButton demonstrations */
-        /**/ FlatButton muiButton1_flat = new FlatButton("Hello world!", "secondary", true);
+        /**/ FlatButton muiButton1_flat = new FlatButton("Tool tipped!", "secondary", true);
         /**/ FlatButton muiButton2_flat = new FlatButton("Hello universe!", "default", true);
         /**/ FlatButton muiButton3_flat = new FlatButton("Hello (censored)!", "disabled", false);
         /**/ FlatButton muiButton4_flat = new FlatButton("Hello Google!", "primary", false);
@@ -31,10 +31,13 @@ public class testing extends JFrame {
         panel.add(muiButton3_raised);
         panel.add(muiButton4_raised);
 
+        muiButton1_flat.setToolTipText("This is a JMaterial-UI tooltip demonstration. These special tool tips only work on JM-UI components.");
+        muiButton1_flat.setToolTipTheme("light");
         panel.add(muiButton1_flat);
         panel.add(muiButton2_flat);
         panel.add(muiButton3_flat);
         panel.add(muiButton4_flat);
+
         panel.setBackground(Color.decode("#202331"));
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setVisible(true);
