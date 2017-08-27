@@ -115,10 +115,11 @@ public class FlatButton extends JButton{
 
     private String toolTipTheme = "dark";
     public void setToolTipTheme(String newTheme) {
-        this.toolTipTheme = newTheme;
         if(!(newTheme.toLowerCase().equals("dark") || newTheme.toLowerCase().equals("light"))) {
             // default theme
             this.toolTipTheme = "dark";
+        } else {
+            this.toolTipTheme = newTheme;
         }
     }
 

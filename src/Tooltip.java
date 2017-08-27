@@ -7,17 +7,18 @@ public class Tooltip extends JToolTip{
         NotoFont noto = new NotoFont(false);
         this.theme = theme;
         this.setComponent(component);
-        switch(this.theme.toLowerCase()) {
+        switch(this.theme) {
             case "dark":
                 this.setBackground(Color.decode("#212121"));
                 this.setForeground(Color.decode("#FFFFFF"));
+                break;
             case "light":
                 this.setBackground(Color.decode("#FFFFFF"));
                 this.setForeground(Color.decode("#212121"));
+                break;
         }
         this.setFont(noto.get());
         this.setBorder(BorderFactory.createEmptyBorder(8,12,8,12));
-
         this.setSize(new Dimension(100, 100));
     }
 
