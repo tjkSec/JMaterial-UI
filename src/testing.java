@@ -1,3 +1,5 @@
+import javafx.scene.control.Slider;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -63,6 +65,9 @@ public class testing extends JFrame {
         panel.add(muiButton2_flat);
         panel.add(muiButton3_flat);
         panel.add(muiButton4_flat);
+
+        MUISlider muiSlider_1 = new MUISlider(680, "primary");
+        panel.add(muiSlider_1);
 
         panel.setBackground(Color.decode("#202331"));
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
